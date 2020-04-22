@@ -3,6 +3,8 @@ import java.io.*;
 public class Main{
 	public static void main(String args[]){
 		int andar = 0;
+		int subsolo = 0;
+
 		char sobe = "(".charAt(0);
 		char desce = ")".charAt(0);
 
@@ -17,8 +19,15 @@ public class Main{
 				}else if(letra == desce){
 					andar = andar - 1;
 				}
+
+				if(subsolo == 0){
+					if(andar == -1){
+						subsolo = i + 1;
+					}
+				}
 			}
-			System.out.println("Resultado: "+andar);
+			System.out.println("Resultado parte 1: "+andar);
+			System.out.println("Resultado parte 2: "+subsolo);
 		}catch(FileNotFoundException ex){
 			ex.printStackTrace();
 		}catch(IOException e){
