@@ -1,16 +1,25 @@
 --- Day 1: Not Quite Lisp ---
 
-Santa was hoping for a white Christmas, but his weather machine's "snow" function is powered by stars, and he's fresh out! To save Christmas, he needs you to collect fifty stars by December 25th.
+Santa was hoping for a white Christmas, but his weather machine's "snow"
+function is powered by stars, and he's fresh out! To save Christmas, he needs
+you to collect fifty stars by December 25th.
 
-Collect stars by helping Santa solve puzzles. Two puzzles will be made available on each day in the Advent calendar; the second puzzle is unlocked when you complete the first. Each puzzle grants one star. Good luck!
+Collect stars by helping Santa solve puzzles. Two puzzles will be made available
+on each day in the Advent calendar; the second puzzle is unlocked when you
+complete the first. Each puzzle grants one star. Good luck!
 
 Here's an easy puzzle to warm you up.
 
-Santa is trying to deliver presents in a large apartment building, but he can't find the right floor - the directions he got are a little confusing. He starts on the ground floor (floor 0) and then follows the instructions one character at a time.
+Santa is trying to deliver presents in a large apartment building, but he can't
+find the right floor - the directions he got are a little confusing. He starts
+on the ground floor (floor 0) and then follows the instructions one character
+at a time.
 
-An opening parenthesis, (, means he should go up one floor, and a closing parenthesis, ), means he should go down one floor.
+An opening parenthesis, (, means he should go up one floor, and a closing
+    parenthesis, ), means he should go down one floor.
 
-The apartment building is very tall, and the basement is very deep; he will never find the top or bottom floors.
+The apartment building is very tall, and the basement is very deep; he will
+never find the top or bottom floors.
 
 For example:
 
@@ -22,20 +31,71 @@ For example:
 
 To what floor do the instructions take Santa?
 
-----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 Tradução:
 
 
-Papai Noel esperava um Natal branco, mas a função "neve" de sua máquina climática é alimentada por estrelas e ele está de fora! Para salvar o Natal, ele precisa que você colete cinquenta estrelas até 25 de dezembro.
+Papai Noel esperava um Natal branco, mas a função "neve" de sua máquina
+climática é alimentada por estrelas e ele está de fora! Para salvar o Natal, ele
+precisa que você colete cinquenta estrelas até 25 de dezembro.
 
-Colete estrelas ajudando o Papai Noel a resolver quebra-cabeças. Dois quebra-cabeças serão disponibilizados a cada dia no calendário do Advento; o segundo quebra-cabeça é desbloqueado quando você completa o primeiro. Cada quebra-cabeça concede uma estrela. Boa sorte!
+Colete estrelas ajudando o Papai Noel a resolver quebra-cabeças.
+Dois quebra-cabeças serão disponibilizados a cada dia no calendário do Advento;
+o segundo quebra-cabeça é desbloqueado quando você completa o primeiro.
+Cada quebra-cabeça concede uma estrela. Boa sorte!
 
 Aqui está um quebra-cabeça fácil para aquecê-lo.
 
-Papai Noel está tentando entregar presentes em um grande prédio de apartamentos, mas ele não consegue encontrar o andar certo - as instruções que recebeu são um pouco confusas. Ele começa no térreo (andar 0) e segue as instruções, um personagem de cada vez.
+Papai Noel está tentando entregar presentes em um grande prédio de apartamentos,
+mas ele não consegue encontrar o andar certo - as instruções que recebeu são um
+pouco confusas. Ele começa no térreo (andar 0) e segue as instruções, um
+personagem de cada vez.
 
-Um parêntese de abertura ((significa que ele deve subir um andar e um parêntese de fechamento)) significa que ele deve descer um andar.
+Um parêntese de abertura ((significa que ele deve subir um andar e um parêntese
+de fechamento)) significa que ele deve descer um andar.
 
-O prédio é muito alto e o porão é muito profundo; ele nunca encontrará o piso superior ou inferior.
+O prédio é muito alto e o porão é muito profundo; ele nunca encontrará o piso
+superior ou inferior.
 
 Por exemplo:
+
+
+    (()) e ()() ambos resultam no andar 0.
+    ((( e (()(()( ambos resultam no andar 3.
+    ))((((( também resulta no andar 3.
+    ()) e ))( ambos resultam no andar -1 (primeiro andar no subsolo).
+    ))) e )())()) ambos resultam no andar -3.
+
+Para qual andar as instruções levam o Papai Noel?
+
+================================================================================
+
+--- Part Two ---
+
+Now, given the same instructions, find the position of the first character
+that causes him to enter the basement (floor -1). The first character in the
+instructions has position 1, the second character has position 2, and so on.
+
+For example:
+
+    ) causes him to enter the basement at character position 1.
+    ()()) causes him to enter the basement at character position 5.
+
+What is the position of the character that causes Santa to first enter the
+basement?
+
+--------------------------------------------------------------------------------
+
+--- Parte dois ---
+
+Agora, seguindo as mesmas instruções, encontre a posição do primeiro caractere
+que o leva a entrar no porão (piso -1).
+O primeiro caractere nas instruções tem a posição 1, o segundo caractere tem a
+posição 2 e assim por diante.
+
+Por exemplo:
+
+     ) faz com que ele entre no porão na posição 1.
+     () ()) faz com que ele entre no porão na posição 5.
+
+Qual é a posição do caractere que faz o Papai Noel entrar primeiro no porão?
